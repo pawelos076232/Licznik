@@ -44,7 +44,8 @@ public class Licznik extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cyfry.setText("0");
+                licznik = 0;
+                cyfry.setText(String.valueOf(licznik));
                 Toast.makeText(getApplicationContext(), "Zresetowano wynik", Toast.LENGTH_SHORT).show();
             }
         });
