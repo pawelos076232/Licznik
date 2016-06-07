@@ -26,7 +26,8 @@ public class Licznik extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cyfry.setText(licznik++);
+                licznik++;
+                cyfry.setText(String.valueOf(licznik));
                 Toast.makeText(getApplicationContext(), "Dodano +1", Toast.LENGTH_SHORT).show();
             }
         });
@@ -34,7 +35,8 @@ public class Licznik extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cyfry.setText(licznik--);
+                licznik--;
+                cyfry.setText(String.valueOf(licznik));
                 Toast.makeText(getApplicationContext(), "Odjęto -1", Toast.LENGTH_SHORT).show();
             }
         });
@@ -42,7 +44,7 @@ public class Licznik extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cyfry.setText(licznik = 0);
+                cyfry.setText("0");
                 Toast.makeText(getApplicationContext(), "Zresetowano wynik", Toast.LENGTH_SHORT).show();
             }
         });
